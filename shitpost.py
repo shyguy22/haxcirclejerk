@@ -86,4 +86,5 @@ async def on_ready():
             mensagens += 1
         await asyncio.sleep((2*ESPERA/60) + abs (3*random.gauss(0, ESPERA/60)))
 
-client.run('NTQxNDMxMDMwOTY4NjE0OTUy.DzflIw.MUFf0mWQZuhiDFpYs0AMgvhb0F8')
+with open('token.txt', 'r') as token:
+	client.run(token.read())
